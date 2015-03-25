@@ -12,6 +12,6 @@ def test_coverage():
     # definitely not sub-coverage
     #sub = subprocess.Popen(['python', '-m', 'thing/sub.py'])
     # this gives "sub" coverage
-    sub = subprocess.Popen(['coverage', 'run', '-p', 'thing/sub.py'])
+    sub = subprocess.Popen(['coverage', 'run', '--debug', 'dataio', '-p', 'thing/sub.py'])
     sub.wait()
     print "done main"

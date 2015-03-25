@@ -4,7 +4,7 @@ import sys
 
 # no subsub process coverage
 #sub = subprocess.Popen(['python', './thing/subsub.py'])
-sub = subprocess.Popen(['coverage', 'run', '-p', './thing/subsub.py'])
+sub = subprocess.Popen(['coverage', 'run', '--debug', 'dataio', '-p', './thing/subsub.py'])
 if False:
     ret = sub.wait()
     print "subsub returned", ret
