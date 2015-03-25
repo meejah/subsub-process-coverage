@@ -1,0 +1,25 @@
+
+Can't get sub-sub-process coverage working properly. Original was with
+Twisted, trying a subprocess.Popen one.
+
+This one uses the simplest possible way to simulate what I'm doing,
+which is: using py.test to run some things (using fixtures), launching
+those things via "coverage run -p" directly, with a subprocess (of
+py.test) that itself has a sub-process.
+
+A "successful" run of this example should produce *two* .coverage.*
+files, whereas most of the variations (see code, uncomment things)
+only produce one.
+
+
+
+
+Separately, I've also tried every variation I could think of:
+
+ - launching the subprocess with "coverage run" with -p, -a
+
+ - using sitecustomize.py as suggested in docs (versus "coverage run")
+
+ - using coverage run with just --rcfile, and absolute path
+
+ - always using absolute path into /tmp/testing venv
