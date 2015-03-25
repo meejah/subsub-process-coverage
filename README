@@ -11,7 +11,7 @@ A "successful" run of this example should produce *two* .coverage.*
 files, whereas most of the variations (see code, uncomment things)
 only produce one.
 
-
+need: "pip install pytest pytest-cov"
 
 
 Separately, I've also tried every variation I could think of:
