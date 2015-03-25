@@ -14,12 +14,13 @@ else:
     # no coverage if we kill it
     #sub.kill()
     # :( also not if we terminate?!
-    #sub.terminate()
-    #sub.send_signal(3) # SIGQUIT
-    print "sending HUP"
-    sub.send_signal(1) # SIGHUP
-    time.sleep(1)
-    print "sending QUIT"
-    sub.send_signal(3) # SIGQUIT
-    #sub.wait() # does work
+    sub.terminate()
+    if False:
+        #sub.send_signal(3) # SIGQUIT
+        print "sending HUP"
+        sub.send_signal(1) # SIGHUP
+        time.sleep(1)
+        print "sending QUIT"
+        sub.send_signal(3) # SIGQUIT
+        #sub.wait() # does work
 print "done sub"
